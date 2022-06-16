@@ -114,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     //Ordenamos valores
     listaNombres.sort();
+    print(listaNombres);
 
     //Comenzamos comparación
     int contador = 1;
@@ -121,11 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
     for(int i = 0; i < listaNombres.length; i++){
 
       if(i>0){
-        if(listaNombres[i-1].compareTo(listaNombres[i]) == 0){
+        if(listaNombres[i].compareTo(listaNombres[i-1]) == 0){
           contador++;
 
         }else{
-          //print(contador.toString() + "  -   " + listaNombres[i-1].toString());
+          print(contador.toString() + "  -   " + listaNombres[i].toString());
           contador = 1;
         }
       }
